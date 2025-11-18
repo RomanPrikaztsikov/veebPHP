@@ -1,13 +1,18 @@
 header {
-    background-color: darkcyan;
+    background-color: cyan;
     text-align: center;
     padding: 10px;
 }
 
 footer {
-    background-color: darkcyan;
+    background-color: cyan;
     text-align: center;
     padding: 8px;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
 ul {
@@ -32,4 +37,29 @@ ul li a {
 
 ul li a:hover {
     background-color: #111111;
+}
+
+div.flex-container{
+    display:flex;
+    flex-direction: row;
+}
+
+div.flex-container > * {
+    margin: 10px;
+    flex: 1;
+    border: solid 1pt grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width:600px){
+    div.flex-container, nav{
+        flex-direction: column;
+    }
+}
+
+img{
+    width: 20%;
+    height: 20%;
 }
