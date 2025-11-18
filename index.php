@@ -1,7 +1,30 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Roman Prikaztsikov PHP tööd</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
 <?php
-    echo "<h1>";
-    echo "Tere";
-    echo "</h1>";
-    $tekst="TARpv 24 õpilane";
-    echo $tekst;
+//päis
+    include("header.php");
 ?>
+
+<?php
+//navigeerimismenüü
+include("nav.php");
+?>
+<main>
+    <section>
+
+    </section>
+</main>
+
+<?php
+//jalus
+include("footer.php");
+?>
+
+</body>
+</html>
