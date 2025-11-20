@@ -1,14 +1,14 @@
-.column {
+.row {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.column > div {
+.row > div {
     border: 1px solid #ccc;
-    padding: 15px;
-    background: #f8f8f8;
+    padding: 10px;
+    width: 250px;
+    background-color: #f8f8f8;
     border-radius: 4px;
 }

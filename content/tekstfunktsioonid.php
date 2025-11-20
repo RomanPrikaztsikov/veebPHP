@@ -21,7 +21,7 @@ $linn = "Tartu";
 </head>
 <body>
 
-<div class="column">
+<div class="row">
 
     <div>
         <h2>Tekstfunktsioonid</h2>
