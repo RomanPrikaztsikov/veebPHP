@@ -1,4 +1,14 @@
 <?php
+function clearVarsExcept($url, $varname){
+    $url=basename($url);
+    if(str_starts_with($url, "?")){
+        return "?$varname=".$_REQUEST[$varname];
+    }
+    return strtok ($url, "?")."?$varname=".$_REQUEST[$varname];
+}
+
+
+
 echo "<h2>Tekstfunktsioonid</h2>";
 $tekst='PHP on skriptikeel serveripoolne';
 echo $tekst;
@@ -65,7 +75,7 @@ $asendus2 = "D";
 echo "<li>Esimene on sama täht, aga mitte kell: ".substr_replace($linn, $asendus2, 0, 5)."</li>";
 echo "</ol>";
 ?>
-<form name="tekstkontroll" action ="tekstfunktsioonid.php" method="post">
+<form name="tekstkontroll" action ="<?=clearVarsExcept($_SERVER['REQUEST_URI'], "link")?>" method="post">
     <label for="linn">Sisesta Linnanimi:</label>
     <input type ="text" id ="linn" name="linn">
     <input type="submit" value="kontrolli">
